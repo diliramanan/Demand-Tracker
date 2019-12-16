@@ -1,0 +1,44 @@
+nav{
+    background-color:#3f51b5;
+    font-family: "Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+    font-weight:600;
+    color: white;
+    font-size:15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    
+    box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.459), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+   
+    /* Fixed Nav */
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9;
+    
+  }
+  
+   
+  a{
+  height: 100%;
+  padding: 10px;
+  width: auto;
+  color: white;
+  padding: 14px 25px;
+  }
+  a:hover {
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  }
+  
+  .example-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+ 

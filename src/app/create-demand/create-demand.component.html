@@ -1,0 +1,81 @@
+<br><br>
+<form [formGroup]="CreateDemandForm" class="container" (ngSubmit)="onSubmit()">
+
+<div class="input-container">
+
+    <mat-form-field appearance="fill">
+            <mat-label>Demand ID</mat-label>
+            <input matInput type="text" formControlName="DemandID">
+    </mat-form-field><br>
+
+    <mat-form-field appearance="fill">
+            <mat-label>Deal ID</mat-label>
+            <input matInput type="text" formControlName="DealID">
+    </mat-form-field><br>
+    
+    <mat-form-field appearance="fill">
+            <mat-label>JD</mat-label>
+            <textarea matInput type="text" formControlName="JD"></textarea>
+    </mat-form-field><br>
+
+    <mat-form-field appearance="fill">
+            <mat-label>Role</mat-label>
+            <input matInput type="text" formControlName="Role">
+    </mat-form-field><br>
+
+    <mat-form-field appearance="fill">
+            <mat-label>Experiance</mat-label>
+            <input matInput type="text" formControlName="Expr">
+    </mat-form-field><br>
+
+    <mat-form-field appearance="fill">
+            <mat-label>Location</mat-label>
+            <input matInput type="text" formControlName="Location">
+    </mat-form-field><br>
+
+    <mat-form-field appearance="fill">
+            <mat-label>Resource Count</mat-label>
+            <input matInput type="text" formControlName="ResourceCount">
+    </mat-form-field><br>
+
+    <mat-form-field appearance="fill">
+            <mat-label>BSD</mat-label>
+            <input matInput type="text" formControlName="BSD">
+    </mat-form-field><br>
+
+    <mat-form-field appearance="fill">
+            <mat-label>Bucket</mat-label>
+            <input matInput type="text" formControlName="Bucket">
+    </mat-form-field><br>
+
+    <mat-form-field appearance="fill">
+            <mat-label>Scale ID</mat-label>
+            <input matInput type="text" formControlName="ScaleID">
+    </mat-form-field><br>
+
+    <mat-form-field appearance="fill">
+            <mat-label>Status</mat-label>
+            <textarea matInput type="text" formControlName="Status"></textarea>
+    </mat-form-field><br>
+
+
+</div>
+
+
+  
+  <div align="center"> 
+
+     
+       <br>
+
+      <button  *ngIf="!submitted"  mat-raised-button color="primary"> <span *ngIf="loading" class="spinner-border spinner-border-sm"></span> Submit </button>
+     
+      &nbsp;
+      <button mat-raised-button routerLink="/report" class="btn-back-color">  Back </button>
+      <br><br><br>
+
+  </div> 
+ 
+  </form>
+  
+  

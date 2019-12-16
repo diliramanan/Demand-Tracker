@@ -1,0 +1,25 @@
+.login {
+    width: 100%;
+    max-width: 320px;
+    padding: 42px;
+    margin: 0 auto;
+  }
+
+  label{
+    font-weight:600;
+  }
+  
+  a{
+    height: 100%;
+    padding: 10px;
+    width: auto;
+    color: black;
+    padding: 14px 25px;
+    }
+    a:hover {
+    cursor: pointer;
+    color: blue;
+    text-decoration: none;
+    }
+
+    

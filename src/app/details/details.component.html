@@ -1,0 +1,93 @@
+
+<form  [formGroup]="EditDemandForm" class="container" (ngSubmit)="onSubmit()">
+
+        <br><br>
+        <h3 *ngIf="!edit && !deleted ">Demand ID: {{user$.DemandID}}</h3>
+
+        <div *ngIf="edit || deleted " class="input-container">
+        
+                                <mat-form-field appearance="fill">
+                                        <mat-label>Demand ID</mat-label>
+                                        <input matInput type="text" formControlName="DemandID" [(value)]="user$.DemandID">
+                                </mat-form-field><br>
+                            
+                                <mat-form-field appearance="fill">
+                                        <mat-label>Deal ID</mat-label>
+                                        <input matInput type="text" formControlName="DealID"  [(value)]="user$.DealID">
+                                </mat-form-field><br>
+                                
+                                <mat-form-field appearance="fill">
+                                        <mat-label>JD</mat-label>
+                                        <textarea matInput type="text" formControlName="JD" [(value)]="user$.JD"></textarea>
+                                </mat-form-field><br>
+                            
+                                <mat-form-field appearance="fill">
+                                        <mat-label>Role</mat-label>
+                                        <input matInput type="text" formControlName="Role"  [(value)]="user$.Role">
+                                </mat-form-field><br>
+                            
+                                <mat-form-field appearance="fill">
+                                        <mat-label>Experiance</mat-label>
+                                        <input matInput type="text" formControlName="Expr" [(value)]="user$.Expr">
+                                </mat-form-field><br>
+                            
+                                <mat-form-field appearance="fill">
+                                        <mat-label>Location</mat-label>
+                                        <input matInput type="text" formControlName="Location" [(value)]="user$.Location">
+                                </mat-form-field><br>
+                            
+                                <mat-form-field appearance="fill">
+                                        <mat-label>Resource Count</mat-label>
+                                        <input matInput type="text" formControlName="ResourceCount" [(value)]="user$.ResourceCount">
+                                </mat-form-field><br>
+                            
+                                <mat-form-field appearance="fill">
+                                        <mat-label>BSD</mat-label>
+                                        <input matInput type="text" formControlName="BSD" [(value)]="user$.BSD" >
+                                </mat-form-field><br>
+                            
+                                <mat-form-field appearance="fill">
+                                        <mat-label>Bucket</mat-label>
+                                        <input matInput type="text" formControlName="Bucket" [(value)]="user$.Bucket">
+                                </mat-form-field><br>
+                            
+                                <mat-form-field appearance="fill">
+                                        <mat-label>Scale ID</mat-label>
+                                        <input matInput type="text" formControlName="ScaleID" [(value)]="user$.ScaleID">
+                                </mat-form-field><br>
+                            
+                                <mat-form-field appearance="fill">
+                                        <mat-label>Status</mat-label>
+                                        <textarea matInput type="text" formControlName="Status" [(value)]="user$.Status"></textarea>
+                                </mat-form-field><br>
+               
+        </div>
+
+        <div align="center"> 
+
+                <button mat-raised-button color="primary" *ngIf="edit && !deleted " >
+                <span *ngIf="loading" class="spinner-border spinner-border-sm"></span>
+                Update
+                </button>
+
+                <button mat-raised-button color="primary" type="button" *ngIf="!edit && !deleted " (click)="onEdit()">
+                Edit
+                </button>
+                
+                &nbsp;
+
+                <button mat-raised-button color="warn"  type="button" *ngIf="!deleted" (click)="onDel()">
+                        <i class="material-icons"  style="font-size:17px;  vertical-align:middle;">delete_forever</i> 
+                        <span  style="font-size:15px; vertical-align:middle;"> Delete Demand</span> 
+                </button>
+
+                &nbsp;        
+
+                <button mat-raised-button routerLink="/report" class="btn-back-color">  Back </button>
+
+                <br><br><br>
+
+        </div> 
+ 
+</form>
+

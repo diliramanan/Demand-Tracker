@@ -1,0 +1,51 @@
+<br><br>
+&nbsp;
+
+
+<button button mat-raised-button color="primary" routerLink="/createdemand" >
+  <i class="material-icons"  style="font-size:22px;  vertical-align:middle;">note_add</i> 
+  <span  style="font-size:17px; vertical-align:middle;"> Add Demand</span> 
+</button>
+
+
+<br><br>
+&nbsp;
+      
+            <mat-form-field class="example-full-width"  appearance="fill">
+                <mat-label>Search for content</mat-label>
+            <input matInput type="text" name="search"  [(ngModel)]="searchText" autocomplete="off">
+            <mat-icon matSuffix>search</mat-icon>
+            </mat-form-field>
+       
+      <table class="table table-hover">
+        <thead>
+        <tr>
+          <th>Demand ID</th>
+          <th>Deal ID</th>
+          <th>Job Description</th>
+          <th>Role</th>
+          <th>Location</th>
+          <th>Expr</th>
+          <th>Resource Count</th>
+          <th>BSD</th>
+          <th>Bucket</th>
+          <th>Scale ID</th>
+          <th>Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr (click)="onSelect(user.id)" *ngFor="let user of users$ | filter:searchText">
+          <td>{{user.DemandID}}</td>
+          <td>{{user.DealID}}</td>
+          <td>{{user.JD}}</td>
+          <td>{{user.Role}}</td>
+          <td>{{user.Location}}</td>
+          <td>{{user.Expr}}</td>
+          <td>{{user.ResourceCount}}</td>
+          <td>{{user.BSD}}</td>
+          <td>{{user.Bucket}}</td>
+          <td>{{user.ScaleID}}</td>
+          <td>{{user.Status}}</td>
+        </tr>
+        </tbody>
+      </table>

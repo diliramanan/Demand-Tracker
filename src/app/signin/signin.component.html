@@ -1,0 +1,43 @@
+<br><br>
+
+<div class="login">
+
+  <form [formGroup]="signup" (ngSubmit)="onSubmit()">
+
+        <mat-card class="example-card">
+          
+              <br>
+                        <h5>Sign Up</h5>      
+              <br>
+
+                 <mat-form-field appearance="outline" >
+                    <mat-label>Lan ID</mat-label>
+                    <input matInput formControlName="id">
+                  </mat-form-field>
+              
+                   <br>
+              
+                   <mat-form-field appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input matInput  type="password" formControlName="pswd">
+                   </mat-form-field>
+                   
+             
+                   <br><br>
+                
+                   
+                  <div align="center"> 
+                      <button mat-raised-button color="primary"> <span *ngIf="loading" class="spinner-border spinner-border-sm"></span> Submit </button>
+                  </div> 
+                  
+                
+                   <br>       
+        </mat-card>
+
+      
+
+    
+  </form>
+
+
+  </div>
