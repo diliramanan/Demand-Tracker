@@ -16,6 +16,11 @@ export interface User {
   Status:string;
 }
 
+export interface signup {
+  id:string;
+  pswd:string;
+}
+
 @Injectable({
   providedIn: 'root'
 })

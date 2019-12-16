@@ -64,6 +64,7 @@ export class SigninComponent implements OnInit {
    else
    {
     this.service.signup(this.signup.value).subscribe(response=>response);
+    console.log(this.signup.value+this.signup.value);
     this.router.navigate(['login']);
    }
     this.loading= false ;
